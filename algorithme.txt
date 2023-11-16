@@ -2,6 +2,8 @@ Debut
 ne=60
 Si ne==30 Alors
 Ecrire("ne egal 30")
+Sinon
 Ecrire("ne different de 30")
 FinSi
+Ecrire("grosse bite de cheval")
 Fin
