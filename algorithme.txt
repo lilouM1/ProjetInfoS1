@@ -1,10 +1,11 @@
 Debut
-Ecrire("Donnez un nombre")
+k=69
+Ecrire("Devinez le nombre")
 Lire(n)
-n=n*6
-Si n<=30 Alors
-Ecrire("Coucou")
+Si n==k Alors
+Ecrire("C'est gagne !")
 Sinon
-Ecrire("Monstre")
+Ecrire("Perdu !")
 FinSi
+Ecrire("Fin du jeu")
 Fin

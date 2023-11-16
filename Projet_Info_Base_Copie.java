@@ -10,14 +10,24 @@ public class Projet_Info_Base_Copie {
             File inputFile = new File("algorithme.txt");
             Scanner scanner = new Scanner(inputFile);
             Scanner scanner2 = new Scanner(inputFile);
+            Scanner scannerLignes = new Scanner(inputFile);
             String codeTikz = "";
             ArrayList<Object> liste = new ArrayList<Object>();
             int firstFS = 0;
             int firstSi = 0;
-            String[][] matrice = new String[25][2];
+
             int posMatriceC = 0;
             int posMatriceL = 0;
             int FinElse = 0;
+            int nbLignes = 0;
+
+            while (scannerLignes.hasNextLine()) {
+                scannerLignes.nextLine();
+                nbLignes++;
+            }
+            scannerLignes.close();
+
+            String[][] matrice = new String[nbLignes][2];
 
             while (scanner.hasNextLine()) {
                 String ligne = scanner.nextLine();

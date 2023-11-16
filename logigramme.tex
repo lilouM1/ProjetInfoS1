@@ -9,22 +9,26 @@
 
 \begin{tikzpicture}
 
-\node[carre] (A00)  {ne=60};
-\node[losange] (S10) [below =of A00] {Si ne$=$=30};
-\node (auxS10) [right = 4em of S10]{};\node[carre] (E20) [below =of S10] {Ecrire("ne egal 30")};
-\node (Else11) [right =4em of S10] {};
-\node[carre] (E21) [below =of Else11] {Ecrire("ne different de 30")};
-\node (FS30) [below =of E20] {};
-\node[carre] (E40) [below =of FS30] {Ecrire("grosse bite de cheval")};
-\node[cercle] (C50) [below =of E40] {\textbullet};
+\node[carre] (A00)  {k=69};
+\node[carre] (E10) [below =of A00] {Ecrire("Devinez le nombre")};
+\node[carre] (L20) [below =of E10] {Lire(n)};
+\node[losange] (S30) [below =of L20] {Si n$=$=k};
+\node (auxS30) [right = 4em of S30]{};\node[carre] (E40) [below =of S30] {Ecrire("C'est gagne !")};
+\node (Else31) [right =4em of S30] {};
+\node[carre] (E41) [below =of Else31] {Ecrire("Perdu !")};
+\node (FS50) [below =of E40] {};
+\node[carre] (E60) [below =of FS50] {Ecrire("Fin du jeu")};
+\node[cercle] (C70) [below =of E60] {\textbullet};
 
-\draw[->] (S10.east)|-(Else11.center)node[pos=1.3,align=center]{sinon}to(E21.north);
-\draw[->] (Else11.south) to (E21.north);
-\node (auxFS30) [right = 4em of FS30]{};\draw [->](E21.south)|-(auxFS30.center)|-(FS30.center);
-\draw[->] (A00.south) to (S10.north);
-\draw[->] (S10.south) to (E20.north);
-\draw[->] (E20.south) to (E40.north);
-\draw[->] (E40.south) to (C50.north);
+\draw[->] (A00.south) to (E10.north);
+\draw[->] (E10.south) to (L20.north);
+\draw[->] (S30.east)|-(Else31.center)node[pos=1.3,align=center]{sinon}to(E41.north);
+\draw[->] (Else31.south) to (E41.north);
+\node (auxFS50) [right = 4em of FS50]{};\draw [->](E41.south)|-(auxFS50.center)|-(FS50.center);
+\draw[->] (L20.south) to (S30.north);
+\draw[->] (S30.south) to (E40.north);
+\draw[->] (E40.south) to (E60.north);
+\draw[->] (E60.south) to (C70.north);
 
 \end{tikzpicture}
 
