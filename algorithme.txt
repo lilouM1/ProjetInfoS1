@@ -1,9 +1,10 @@
 Debut
-ne=60
-Si ne==30 Alors
-Ecrire("ne egal 30")
+Ecrire("Donnez un nombre")
+Lire(n)
+n=n*6
+Si n<=30 Alors
+Ecrire("Coucou")
 Sinon
-Ecrire("ne different de 30")
+Ecrire("Monstre")
 FinSi
-Ecrire("grosse bite de cheval")
 Fin
